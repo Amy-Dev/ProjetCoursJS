@@ -1,6 +1,21 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
+    document.querySelector('.container').innerHTML = 'hello world'
 	
-	// Model qui permet de récupérer la data
+
+        function model(){
+            return 'Hello world !'
+        }
+
+        function controller() {
+            const word = model()
+        }
+    })
+    
+    
+    // Model qui permet de récupérer la data
 	class Model {
 
 		constructor() {
@@ -23,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		getPageByUrl(url) {
 			return this.data.find(page => page.url === url)
 		}
-	}
-
+	
+    }
 	// View qui permet de modifier le template html
 	class View {
 		constructor() {
@@ -54,4 +69,4 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	controller()
 
-})
+
